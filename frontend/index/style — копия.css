@@ -1,0 +1,75 @@
+@keyframes name {
+
+}
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    position: relative;
+}
+.header__wrap {
+    display: flex;
+    align-items: center;
+    background: #000;
+}
+.navigation__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.navigation__link {
+    color: pink;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.7s;
+    position: relative;
+    margin: 0px 15px;
+    padding: 20px 25px;
+}
+.navigation__link:hover {
+    color: white;
+}
+.navigation__link::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: #ffe600;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    
+}
+.navigation__link:hover::before {
+    width: 110%;
+}
+.navigation__item {
+    overflow: hidden;
+}
+.navigation__item::before {
+    content: attr(data-text);
+    font-size: 15px;
+    color:red;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition-delay: 0.3s;
+    transition: 0.3s;
+    z-index: 2;
+    pointer-events: none;
+}
+.navigation__item:hover::before {
+    top: 50%;
+    transform: translate(-50%, -50%);
+} 
+a {
+    width: 100px;
+    transition: 0.3s;
+}
+a:hover {
+ width: 50px;
+}
+.navigation__link:hover {
+    
+}
